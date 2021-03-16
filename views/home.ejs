@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="An interval timer perfect for workouts, meditation or whatever keeps you busy">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/modals.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=News+Cycle&display=swap" rel="stylesheet">
+    <link rel="icon" href="imgs/saturn.ico" type="image/x-icon">
+    <title>The interval timer for workouts, meditation and more</title>
+</head>
+<body>
+
+    <div class="content">
+        <div class="header">
+            <div class="logo">
+                <img class="logo-picture" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbG5zOnN2Z2pzPSJodHRwOi8vc3ZnanMuY29tL3N2Z2pzIiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgeD0iMCIgeT0iMCIgdmlld0JveD0iMCAwIDUxMi4wMjEgNTEyLjAyMSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNTEyIDUxMiIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PGc+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+Cgk8Zz4KCQk8cGF0aCBkPSJNNTAwLjEyMiwxMC4yNDljLTcuMDg4LTYuOTE0LTE2Ljc0Mi0xMC42MTQtMjYuNDYxLTEwLjIyMWMtNDkuOTcyLDIuMTgzLTEwNi45MDMsNDguMzE4LTEyOS41LDY4LjQ4NmwyOS4xOTIsMTIuNjMyICAgIGM0MC40MjctMjIuNTcsNjMuNzY0LTI3LjExOCw3NS4zOTEtMTQuODdjMTguMjU5LDE5LjIzNi0xMS44MzgsNjkuNzc0LTIxLjUwMSw4NC43OTlsLTIuMTU2LDIuODc3ICAgIGMtMS42MDgsMi4xMDEtNC40NzYsNS44MzctOC4zODUsMTAuODZjLTM0LjkwMSw0NC45NDgtMTQ4LjQzNSwxODYuNzI0LTI0My42NjUsMjU2LjcwOGMtMC40NTcsMC4zMzgtMC45MTMsMC42MzktMS4zNjEsMC45NzcgICAgYy0zLjA0MiwyLjIyLTYuMDc0LDQuNDAzLTkuMDcsNi40NjdjLTMuNDUzLDIuMzc1LTYuODY5LDQuNjQtMTAuMjU3LDYuNzk2Yy0wLjA3MywwLjA0Ni0wLjEzNywwLjA5MS0wLjIwMSwwLjEzN2wtMC4wMTgsMC4wMDkgICAgbC0xLjcyNiwxLjEzM2MtMC41NzUsMC4zNTYtMS4xMTQsMC42NzYtMS42ODEsMS4wMzJsLTEuNzksMS4xMzNsLTAuMDI3LTAuMDE4Yy00Ni43OTMsMjguODE3LTcyLjEzLDM1Ljg2LTg0LjI2LDIzLjQwMSAgICBjLTEyLjE3NS0xMi41MDQtMy45ODItNDEuMTM5LDI0LjM2LTg1LjE0NmMtMS40OTgtMi4zNDctMi45ODctNC42ODYtNC4zNzUtNy4wODhsLTIuNjQ5LTQuNTRsMC40MTEtMC43MzFsLTEwLjIxMi0yMC4zOTYgICAgQzUwLjMyNCwzNjYuODU0LDMuMzc1LDQyNC4zNywxLjE1Niw0NzQuNzljLTAuNDIsOS43MjgsMy4yOTcsMTkuMzgyLDEwLjIyMSwyNi40NjFjNi45NjksNy4xNDMsMTYuMjQ5LDEwLjg1MSwyNS45NTgsMTAuNzY5ICAgIGM5MC4xMTUtMS43NzIsMTkxLjkyMS04Ni43MDgsMjU3LjQ4NC0xNTIuNTA4YzIuNjQ5LTIuNjY3LDUuMjg5LTUuMzE2LDcuOTM3LTguMDM4YzEuNDg5LTEuNTI1LDIuOTE0LTMuMDA1LDQuMzU3LTQuNTAzICAgIGM0Ljc4Ni00Ljk4Nyw5LjU5MS0xMC4wMjksMTQuNDEzLTE1LjIxN2wwLjIzNy0wLjIzN2M1LjktNS45LDExLjY1NS0xMS43NzQsMTcuMzA5LTE3LjYxOWMxLjQyNS0xLjQ3MSwyLjc2OC0yLjg5NSw0LjE2NS00LjM0OCAgICBjNC4zNzUtNC41NTgsOC42ODYtOS4xMDcsMTIuOTA2LTEzLjYyOGMxLjE4Ny0xLjI3LDIuMzM4LTIuNTMsMy41MDctMy43OTFjNC43NTktNS4xNTIsOS40NTQtMTAuMjc2LDE0LjAxMS0xNS4zODEgICAgYzAuMzg0LTAuNDI5LDAuNzY3LTAuODU5LDEuMTUxLTEuMjg4YzI2LjkwOC0zMC4xNzgsNTAuMjQ2LTU5LjQzNCw2OS43MDEtODcuNDQ4bDYuODQxLTkuODU1ICAgIGM1Mi42MjktNzguNjQzLDU5LjIwNi0xMjUuMzcyLDU5LjUzNS0xNDEuOTMxQzUxMS4wNzMsMjYuNDM0LDUwNy4yNTUsMTcuMjA5LDUwMC4xMjIsMTAuMjQ5eiIgZmlsbD0iI2ZmZmZmZiIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgc3R5bGU9IiI+PC9wYXRoPgoJPC9nPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+Cgk8Zz4KCQk8cGF0aCBkPSJNNDQ5LjAyNywyMTMuMTU5Yy0yNy42ODUsMzcuODk2LTYyLjAzNyw3Ny44MjEtMTAyLjI2MywxMTguOTc4Yy00LjQ0OCw0LjU4NS04LjQ3Niw4LjY2OC0xMS44ODMsMTIuMDc1ICAgIGMtMC4wNDYsMC4wMjctMC4wNjQsMC4wNDYtMC4wODIsMC4wNzNjLTAuODQsMC45MDQtMS42ODEsMS43NjMtMi41MTIsMi42NThjLTMuOTM3LDQuMjItNy44NTUsOC4zNzYtMTEuNzI4LDEyLjQwNCAgICBjLTAuOTA0LDAuOTQxLTEuODA5LDEuODU0LTIuNzA0LDIuNzg2Yy00LjA2NSw0LjIwMi04LjA5Myw4LjMyMS0xMi4wNzUsMTIuMzIyYy0wLjUxMSwwLjUxMS0xLjAyMywxLjAxNC0xLjUyNSwxLjUyNSAgICBjLTMwLjUxNiwzMC41MzUtNTguODY4LDU1LjMxNS04NS4wNzMsNzUuMzE4YzE0Ljc2LDMuNTcxLDI5Ljg2OCw1LjM4OSw0NS4xMjEsNS4zODljMTA1Ljc3LDAsMTkxLjgxMi04Ni4wNDEsMTkxLjgxMi0xOTEuODEyICAgIEM0NTYuMTE1LDI0Ny4yODMsNDUzLjc0LDIyOS45NTYsNDQ5LjAyNywyMTMuMTU5eiIgZmlsbD0iI2ZmZmZmZiIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgc3R5bGU9IiI+PC9wYXRoPgoJPC9nPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+Cgk8Zz4KCQk8cGF0aCBkPSJNMzYzLjQ5NywxMDAuNzU3bC0zLjA5Ni0xLjM4OGwtMTcuNzExLTkuNTU0Yy0yNC4zODgtMTEuMDE2LTUwLjk2Ny0xNi43NDItNzguNDI0LTE2Ljc0MiAgICBDMTU4LjUxNCw3My4wNjMsNzIuNDU1LDE1OS4xMTMsNzIuNDU1LDI2NC44NzVjMCwyMi44OTksNC4xNjUsNDUuMjg2LDEyLjEyMSw2Ni42ODdjMC4yNTYsMC42OTQsMC40OTMsMS4zOTcsMC43MjIsMi4xMSAgICBjMC4xNjQsMC41MDIsMC4zMiwxLjAwNSwwLjUxMiwxLjQ5OGwxNC44OTcsMjkuNzIyYzEuMTA1LDEuNjk5LDIuMjQ3LDMuMzYxLDMuMzg5LDUuMDMzYzAsMCw0LjkxNCw3LjIzNCw0Ljg5Niw3LjI2MSAgICBjNS45NzQsOC4yMywxMi41NzcsMTYuMDEyLDE5Ljc0NywyMy4yMzdjNC41NDksNC41NzYsMTUuNjkyLDE5LjA4MSwyMi40NTEsMTQuMzEzYzQzLjk5OC0zMS4wOTIsODIuOTA4LTY4Ljc3OCwxMTkuODgyLTEwNy43ODkgICAgYzMyLjc2My0zNC41NTQsNjQuMDEtNzAuNTQxLDk0LjI1My0xMDcuMzE0YzE1LjA4LTE4LjMzMiwyOS45NDEtMzYuODQ2LDQ0LjUzNy01NS44ODFjMC4zNTYtMC40NTcsMC42MDMtMC43OTUsMC44ODYtMS4xNTEgICAgbDAuNTg1LTAuNzY3QzM5Ny43MDMsMTI1LjU0NiwzODEuNjQ2LDExMS43NjMsMzYzLjQ5NywxMDAuNzU3eiBNMTEyLjUxNiwyOTUuNjE5Yy00LjM2NiwwLTguMjIxLTMuMTMzLTguOTg4LTcuNTgxICAgIGMtMi40MDItMTMuOTM4LTMuNjM1LTI3Ljg3Ny0zLjY1NC00MS40MTNjLTAuMDA5LTUuMDQyLDQuMDc0LTkuMTM0LDkuMTI1LTkuMTQzaDAuMDA5YzUuMDQyLDAsOS4xMjUsNC4wODMsOS4xMzQsOS4xMjUgICAgYzAuMDE4LDEyLjUxMywxLjE2LDI1LjQxLDMuMzg5LDM4LjMzNWMwLjg1OSw0Ljk2OS0yLjQ3NSw5LjctNy40NDQsMTAuNTVDMTEzLjU0OCwyOTUuNTgzLDExMy4wMjgsMjk1LjYxOSwxMTIuNTE2LDI5NS42MTl6ICAgICBNMTQ1LjQzNSwzNjUuMTE5Yy0zLjkzNywzLjI0My05LjgwMSwyLjY0OS0xMi45NTItMS4zNjFjLTUuMTg4LTYuNjA0LTkuNjA5LTEzLjA4LTEzLjU3My0yMi4xNSAgICBjLTIuMDI4LTQuNjIyLDAuMDgyLTEwLjAxMSw0LjcwNC0xMi4wMjljNC42MjItMi4wMjgsMTAuMDExLDAuMDgyLDEyLjAyOSw0LjcwNGMzLjE1MSw3LjIwNyw2LjYxMywxMi4zNCwxMS4xMTYsMTguMDY3ICAgIEMxNDkuODM3LDM1Ni4yODYsMTQ5LjI4OSwzNjEuOTQsMTQ1LjQzNSwzNjUuMTE5eiBNMjY0LjI2NywxMTguNzMyYy0wLjAwOSwwLTAuMDE4LDAtMC4wMjcsMCAgICBjLTM4LjUzNiwwLTc3Ljk3NiwxNi40MDQtMTAyLjkzOSw0Mi44MTFjLTEuNzksMS45LTQuMjExLDIuODU5LTYuNjQsMi44NTljLTIuMjU2LDAtNC41MTItMC44MjItNi4yNzUtMi40OTQgICAgYy0zLjY2My0zLjQ2Mi0zLjgyNy05LjI0My0wLjM2NS0xMi45MTVjMjguMjk3LTI5LjkzMiw3Mi44MjQtNDguNTI4LDExNi4yMS00OC41MjhjMC4wMDksMCwwLjAxOCwwLDAuMDI3LDAgICAgYzUuMDY5LDAsOS4xNDMsNC4wOTIsOS4xNDMsOS4xMzRDMjczLjQsMTE0LjY0LDI2OS4zMDgsMTE4LjczMiwyNjQuMjY3LDExOC43MzJ6IiBmaWxsPSIjZmZmZmZmIiBkYXRhLW9yaWdpbmFsPSIjMDAwMDAwIiBzdHlsZT0iIj48L3BhdGg+Cgk8L2c+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPC9nPjwvc3ZnPg==" />
+                <div class="logo-name-secsh">
+                    <p class="logo-name">spacetimer</p> 
+                </div>
+            </div>
+        </div>
+
+        <button class="help-button">
+            Instructions
+        </button>
+
+        <div class="timer-content">
+            <div class="timer-adj timer-left invisible"> 
+                <h3 class="timer-instruction-title">Steps</h3>
+                <div class="timer-instruction-container">
+                    <p class="timer-instruction timer-instruction-heading timer-instruction-heading__1"> Step 1) Set timer</p>
+                </div>
+                <div class="timer-instruction-container">
+                    <p class="timer-instruction timer-instruction-heading"> 
+                        Step 2) Add interval
+                    </p>
+                    <p class="timer-instruction">
+                        Intervals are smaller sub-timers that remind you of certain milestones
+                        reached. For example that you are 5 minutes into your meditation.
+                    </p>
+                </div>
+            </div>
+            <div class="timer-mid"> 
+                <div class="timer">
+                    <div class="timerMain">
+                        <div class="topButtons">
+                            <p class="setTimer"> Set Timer</p>
+                        </div>
+                        <div class="timerTop">
+                            <div class='timerHours timerFrame'>
+                                <p class="timer_label"> Hours</p>
+                                <p class='timeDisplay timerHours_display hours'> 00 </p>
+                            </div>
+                            <div class='timerMins timerFrame'>
+                                <p class="timer_label"> Minutes</p>
+                                <p class='timeDisplay timerMins_display minutes'> 00 </p>
+                            </div>
+                            <div class="timerSeconds timerFrame">
+                                <p class="timer_label"> Seconds</p>
+                                <p class='timeDisplay timerSeconds_display seconds'> 00 </p>
+                            </div>
+                        </div>
+                        <div class="timerMilliseconds">
+                            <p class="ms">00</p>
+                        </div>
+                        <div class="timerBottom">
+                            <div class="timerButtons">
+                                <p class="bottomButton startButton"><i class="fas fa-play"></i></p>
+                                <p class="bottomButton pauseButton"><i class="fas fa-pause"></i></p>
+                                <p class="bottomButton resetButton"><i class="fas fa-undo"></i></p>
+                            </div>
+                           
+                            <p class="settings bottomButton"><i class="fas fa-volume-up"></i></p>
+                        </div>
+                    </div>
+        
+                    <div class="repeaters"></div>
+        
+                    <div class="new-interval">
+                        <div class="new-interval-options">
+                            <p class="new-interval-button">Add Interval</p>
+                        </div>
+                        <div class="interval-menu">
+                            <p class="addFromStart addButton">From Timer's Start</p>
+                            <p class="addFromEnd addButton">From Timer's End </p>
+                            <p class="addRepeater addButton">Recurring </p>
+                        </div >
+                    </div>
+                    <div class="timerIntervals">
+                        <div class="intervalsDiv"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="timer-adj timer-right invisible"> 
+                <h3 class="timer-instruction-title">Intervals</h3>
+                <div class="timer-instruction-container">
+                    <p class="timer-instruction timer-instruction-heading"> Interval - from timer's start</p>
+                    <p class="timer-instruction"> Sets an interval from when the main timer starts.</p>
+                </div>
+                <div class="timer-instruction-container">
+                    <p class="timer-instruction timer-instruction-heading"> Interval - from timer's end</p>
+                    <p class="timer-instruction"> Sets an interval from when the main timer ends.</p>
+                </div>
+                <div class="timer-instruction-container">
+                    <p class="timer-instruction timer-instruction-heading"> Interval - recurring</p>
+                    <p class="timer-instruction"> Sets a recurring interval that repeats itself for the specified
+                        time and starts going from when the main timer starts.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+       
+        <div class="footer"></div>
+    </div>
+
+    <div class="timer-modal">
+        <div class="bg-modal">
+            <div class="modal-content">
+                <p class="timer-modal-title"></p>
+                <div class="timer-modal-close">+</div>
+                <form action="">
+                    <div class="timer-modal-input-section">
+                        <label class="modal-input-header" for="timer-modal-hours-input">Hours</label>
+                        <input type="number" id="timer-modal-hours-input" class="timer-modal-input" value=0 min="0" max="60">
+                    </div>
+                    <div class="timer-modal-input-section" >
+                        <label class="modal-input-header" for="timer-modal-minutes-input">Minutes</label>
+                        <input id="timer-modal-minutes-input" class="timer-modal-input" type="number" value=0 min="0" max="60">
+                    </div>
+                    <div class="timer-modal-input-section timer-modal-input-section-seconds">
+                        <label class="modal-input-header" for="timer-modal-seconds-input">Seconds</label>
+                        <input id="timer-modal-seconds-input" class="timer-modal-input" type="number" value=0 min="0" max="60">
+                    </div>
+
+                    <div class="timer-modal-error">
+                        <p id="timer-modal-error-message"></p>
+                    </div>
+                    <div class="timer-modal-submit-div">
+                        <p class="timer-modal-submit" >Set Timer</p>
+                    </div >
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="messageModal">
+        <div class="messageModalContent">
+            <p class="messageModalClose">+</p>
+            <p class="messageModalTitle"> Modal Message Title</p>
+            <p class="messageModalBody">Modal message body content</p>
+            <div class="messageModalOptions">
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/timerClass.js"> </script>
+    <script src="/js/timerHelpers.js"> </script>
+    <script src="/js/timer.js"> </script>
+    <script src="/js/intervals.js"> </script>
+    <script src="/js/repeaters.js"> </script>
+    <script src="/js/index.js"> </script>
+    
+</body>
+</html>

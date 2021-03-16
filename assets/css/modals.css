@@ -1,0 +1,171 @@
+p{
+  padding: 0;
+}
+
+.timer-modal{
+    color: black;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    position: absolute;
+    top: 0;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.modal-content{
+  width: 250px;
+  height: 450px;
+  background-color: white;
+  border-radius: 5px;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+}
+
+.timer-modal-input{
+    width: 60px;
+    display: block;
+    margin: 5px auto; 
+    text-align: center;
+    border-radius: 5px;
+}
+
+.timer-modal-close{
+  font-size: 100;
+    position: absolute;
+    top: 0;
+    right: 10px;
+    font-size: 40px;
+    transform: rotate(45deg);
+    cursor: pointer;
+}
+
+.timer-modal-input-section{
+    color: white;
+    width: 150px;
+    padding: 10px 10px;
+    margin: 20px auto;
+    border-radius: 3px;
+    background-color: rgba(0,0,0,0.8);
+}
+
+.timer-modal-submit-div{
+  display: flex;
+  justify-content: center;
+}
+
+.timer-modal-submit{
+  background-color: rgba(0,0,0,0.8);
+  border-radius: 5px;
+  color: white;
+  padding: 3px;
+  position:absolute;
+  bottom: 10px;
+  cursor: pointer;
+  display: inline-block;
+  margin: 0;
+
+}
+
+#timer-modal-error-message{
+    display: none;
+    color: rgb(0, 114, 122);
+    margin: 5px;
+  }
+
+/* =====================================
+Message Modal 
+===================================== */
+
+.messageModal{
+  /* display: flex; */
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.7);
+  position: absolute;
+  top: 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.messageModalContent{
+  color: black;
+  width: 250px;
+  height: 350px;
+  background-color: white;
+  border-radius: 5px;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+}
+
+.messageModalTitle{
+  font-weight: 700;
+  margin: 40px 0 50px 0;
+}
+
+.messageModalClose{
+  font-size: 40px;
+  transform: rotate(45deg);
+  margin: 0;
+  position: absolute;
+  top: 0;
+  right: 10px;
+  cursor: pointer;
+}
+
+.timer-modal-title{
+  font-weight: 700;
+  color: rgb(40, 55, 134);
+  font-size: 22px;
+  margin: 5px;
+}
+
+.timer-modal-input-section-seconds{
+  margin-top: 10px;
+}
+
+@media (min-width: 900px){
+  .messageModalContent{
+    width: 400px;
+    height: 666px;
+  }
+
+  .messageModalContent .messageModalTitle, .messageModalBody{
+    font-size: 23px;
+  }
+
+  .messageModalClose, .timer-modal-close{
+    font-size: 40px;
+  }
+
+  .modal-content{
+    width: 400px;
+    height: 666px;
+  }
+
+  .timer-modal-input, #timer-modal-error-message{
+    font-size: 20px;
+  }
+
+  .modal-input-header{
+    font-size: 20px;
+  }
+
+  .timer-modal-input-section{
+    width: 266px;
+  }
+
+  .timer-modal-title{
+    font-size: 25px;
+  }
+
+  .timer-modal-submit{
+    font-size: 20px;
+    width: 110px;
+  }
+
+}
